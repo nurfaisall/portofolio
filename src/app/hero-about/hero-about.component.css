@@ -1,0 +1,18 @@
+@keyframes icon-hover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.test:hover > div {
+  @apply bg-[#F87C58] translate-y-16;
+}
+.test:hover > svg {
+  @apply rotate-[360deg] fill-white bg-[#F87C58];
+}

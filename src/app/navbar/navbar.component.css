@@ -1,0 +1,23 @@
+.hamburger-button {
+  @apply w-16 h-12 rounded-md;
+}
+
+.hamburger-button > div:nth-child(1) {
+  @apply h-1 w-8 bg-white rounded transition-all;
+}
+.hamburger-button > div:nth-child(2) {
+  @apply h-1 w-8 bg-white rounded transition-all;
+}
+.hamburger-button > div:nth-child(3) {
+  @apply h-1 w-8 bg-white rounded transition-all;
+}
+
+.hamburger-button-active > div:nth-child(1) {
+  @apply rotate-45 origin-left bg-black;
+}
+.hamburger-button-active > div:nth-child(2) {
+  @apply h-0 bg-black;
+}
+.hamburger-button-active > div:nth-child(3) {
+  @apply -rotate-45 origin-left bg-black;
+}

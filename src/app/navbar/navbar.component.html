@@ -1,0 +1,27 @@
+<nav class="fixed top-[-20rem] sm:translate-y-[0px] sm:top-0 flex px-2 sm:px-20 w-full sm:h-16 items-center flex-wrap justify-center z-[999] bg-slate-300 sm:bg-transparent transition-all py-5"
+    [ngClass]="{'translate-y-[320px]' : isHamburgerActive }">
+    <div class="w-full sm:w-1/2 text-fixed text-xl flex justify-between">
+        <div (click)="smoothScroll('#hero')" class="cursor-pointer">
+            <span class="text-[#F87C58] font-bold">Nur
+            </span><span class="text-white">Faisal</span>
+        </div>
+    </div>
+    <div
+        class="w-full sm:w-1/2 flex-col sm:flex-row flex flex-wrap items-start sm:justify-evenly sm:text-white sm:items-center gap-5">
+        <a *ngFor="let item of items; let i=index" (click)="smoothScroll(item.link); hamburgerButton"
+            class="hover:text-[#F87C58] transition-all cursor-pointer duration-700 border-b-0 hover:border-b-2 w-full sm:w-auto">
+            {{item.title}}
+        </a>
+        <a class="hover:bg-[#d66749] rounded-md bg-[#F87C58] transition-all cursor-pointer duration-700 px-7 py-1.5 text-white"
+            (click)="hamburgerButton()">
+            Hire me
+        </a>
+    </div>
+</nav>
+<button
+    class="hamburger-button right-2 top-2 flex flex-col items-center justify-evenly cursor-pointer z-[99999] fixed sm:hidden text-white"
+    [ngClass]="{ 'hamburger-button-active': isHamburgerActive}" (click)="hamburgerButton()">
+    <div></div>
+    <div></div>
+    <div></div>
+</button>
