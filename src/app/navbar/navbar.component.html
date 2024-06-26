@@ -9,12 +9,12 @@
     <div
         class="w-full sm:w-1/2 flex-col sm:flex-row flex flex-wrap items-start sm:justify-evenly sm:text-white sm:items-center gap-5">
         <a *ngFor="let item of items; let i=index" (click)="smoothScroll(item.link); hamburgerButton"
-            class="hover:text-[#F87C58] transition-all cursor-pointer duration-700 border-b-0 hover:border-b-2 w-full sm:w-auto">
+            class="hover:text-[#F87C58] transition-all cursor-pointer duration-700 border-b-2 border-transparent hover:border-white hover:border-b-2 w-full sm:w-auto">
             {{item.title}}
         </a>
         <a class="hover:bg-[#d66749] rounded-md bg-[#F87C58] transition-all cursor-pointer duration-700 px-7 py-1.5 text-white"
-            (click)="hamburgerButton()">
-            Hire me
+            href="../../assets/nurfaisal-cv.pdf">
+            Download CV
         </a>
     </div>
 </nav>
